@@ -27,9 +27,9 @@ class BubbleList<B> extends StatelessWidget {
                 itemBuilder: (context, index) =>
                     this.bubbleItemBuilder(context, index, items[index]),
               )
-            : ((emptyListFallbackBuilder != null)
+            : (emptyListFallbackBuilder != null)
                 ? emptyListFallbackBuilder!(context)
-                : Container()),
+                : Container(),
         //: noEntitiesBuilder(),
       ),
     );

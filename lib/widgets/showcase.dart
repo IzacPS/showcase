@@ -26,6 +26,7 @@ class Showcase<B, E, EV> extends StatelessWidget {
         height: bubbleConfig.size + 56,
         child: BubbleList<B>.builder(
           items: items.map((e) => e.bubbleItem).toList(),
+          emptyListFallbackBuilder: bubbleConfig.emptyListFallbackBuilder,
           bubbleItemBuilder: (context, index, bubbleItem) {
             return Bubble<B>(
               index: index,
