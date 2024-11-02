@@ -48,5 +48,5 @@ EntityConfig({
 ```
 Um caso de uso pode ser encontrado no diretório `/example`.
 
-![](./assets/video.gif)
+![](./assets/video2.gif)
 ![](./assets/video3.gif)
