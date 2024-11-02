@@ -12,7 +12,7 @@ class BubbleAvatar<B> extends StatelessWidget {
 
   final Color Function(BuildContext context, int index, B bubbleItem)
       statusBuilder;
-  final DecorationImage? Function(BuildContext context, int index, B bubbleItem)
+  final Widget Function(BuildContext context, int index, B bubbleItem)
       avatarBuilder;
   final B item;
   final int index;
@@ -28,15 +28,7 @@ class BubbleAvatar<B> extends StatelessWidget {
         border:
             Border.all(color: statusBuilder(context, index, item), width: 3),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(2.0),
-        child: Container(
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            image: avatarBuilder(context, index, item),
-          ),
-        ),
-      ),
+      child: avatarBuilder(context, index, item),
     );
   }
 }

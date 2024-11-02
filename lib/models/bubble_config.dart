@@ -18,7 +18,7 @@ class BubbleConfig<B> {
 
   final Color Function(BuildContext context, int index, B bubbleItem)
       statusBuilder;
-  final DecorationImage? Function(BuildContext context, int index, B bubbleItem)
+  final Widget Function(BuildContext context, int index, B bubbleItem)
       avatarBuilder;
   final Widget Function(BuildContext context, int index, B bubbleItem)
       descriptionBuilder;

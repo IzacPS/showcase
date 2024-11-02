@@ -107,7 +107,13 @@ class ShowcasePage extends StatelessWidget {
           bubbleConfig: BubbleConfig(
             //builder para o avatar
             avatarBuilder: (context, index, data) {
-              return DecorationImage(image: AssetImage(data.avatar));
+              return Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage(data.avatar)),
+                  shape: BoxShape.circle,
+                ),
+              );
+              // return DecorationImage(image: AssetImage(data.avatar));
             },
             //builder para a descrição do avatar
             descriptionBuilder: (context, index, data) {
